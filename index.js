@@ -1,7 +1,6 @@
 import { S3Client, PutObjectCommand} from '@aws-sdk/client-s3';
 import { getProducers } from "@telosnetwork/validator-checks";
 
-const PRODUCER_COUNT = 100;
 const s3Client = new S3Client({ region: 'us-east-1'});
 const run = async (bucketParams) => {
     try {
@@ -15,7 +14,7 @@ const run = async (bucketParams) => {
 }
 
 (async ()=> {
-    const producerData = await getProducers(PRODUCER_COUNT);
+    const producerData = await getProducers();
     const producerDataJson = JSON.stringify(producerData);
 
     const bucketParams = {
