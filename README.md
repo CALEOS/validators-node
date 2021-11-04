@@ -9,8 +9,10 @@ AWS Access Key ID [None]: <access-key-id>
 AWS Secret Access Key [None]: <secret-access-key>
 Default region name [None]: us-east-1
 Default output format [None]: json
+```
 
 To use the script in another project install the following packages and copy the script in `index.js`:
+
 ```
 yarn add @aws-sdk/client-s3
 yarn add @telosnetwork/validator-checks
