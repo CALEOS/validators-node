@@ -4,11 +4,11 @@ import { getProducers } from "@telosnetwork/validator-checks";
 const s3Client = new S3Client({ region: 'us-east-1'});
 
 const run = async (bucketParams) => {
-  await s3Client.send(new PutObjectCommand(bucketParams))
+  await s3Client.send(new PutObjectCommand(bucketParams));
   console.log(
     `Successfully uploaded object:${bucketParams.Bucket}/${bucketParams.Key}`
-  )
-}
+  );
+};
 
 (async ()=> {
   try{
@@ -23,7 +23,8 @@ const run = async (bucketParams) => {
     };
 
     await run(bucketParams);
+
   } catch(err) {
     console.error(err);
   }
-})()
+})();
