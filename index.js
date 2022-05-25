@@ -12,7 +12,7 @@ const run = async (bucketParams) => {
 
 (async ()=> {
   try{
-    const producerData = await getProducers(1);
+    const producerData = await getProducers();
     const producerDataJson = JSON.stringify(producerData);
 
     const bucketParams = {
